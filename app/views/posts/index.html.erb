@@ -2,7 +2,7 @@
 
 <h1>Posts</h1>
 
-<%= link_to "New post", new_post_path %>
+<%= link_to "New post", new_post_path, class: "btn btn-primary", style: "margin-bottom: 15px;" %>
 
 <div class="card">
   <div class="card-body">
@@ -21,7 +21,7 @@
           <tr>
             <th scope="row"><%= post.id %></th>
             <td><%= link_to post.title, post_path(post) %></td>
-            <td><%= post.body %></td>
+            <td><%= post.body[0..100] %></td>
             <td><%= post.published %></td>
             <td><%= link_to "编辑", edit_post_path(post) %></td>
           </tr>
