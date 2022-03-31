@@ -11,22 +11,23 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="form-group">
     <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, rows: 15, class: "form-control"  %>
+  </div>
+
+  <div class="form-group form-check">
+    <%= form.check_box :published, class: "form-check-input" %>
+    <%= form.label :published, class: "form-check-label" %>
+    
   </div>
 
   <div>
-    <%= form.label :published, style: "display: block" %>
-    <%= form.check_box :published %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
